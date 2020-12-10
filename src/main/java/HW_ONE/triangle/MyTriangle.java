@@ -6,12 +6,9 @@ public class MyTriangle {
     private MyPoint v3;
 
     public MyTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-        v1.setX(x1);
-        v1.setY(y1);
-        v2.setX(x2);
-        v2.setY(y2);
-        v3.setX(x3);
-        v3.setY(y3);
+        v1=new MyPoint(x1,y1);
+        v2=new MyPoint(x2,y2);
+        v3=new MyPoint(x3,y3);
     }
 
     public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3) {
