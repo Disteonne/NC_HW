@@ -1,4 +1,4 @@
-package HW_ONE.triangle;
+package HW_ONE.partOne.triangle;
 
 public class MyPoint {
     private int x;

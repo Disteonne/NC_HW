@@ -1,4 +1,4 @@
-package HW_ONE.book;
+package HW_ONE.partOne.book;
 
 public class Author {
     private String name;

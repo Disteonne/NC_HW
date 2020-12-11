@@ -1,4 +1,4 @@
-package HW_ONE;
+package HW_ONE.partOne;
 
 public class Rectangle {
     private float length=1.0f;

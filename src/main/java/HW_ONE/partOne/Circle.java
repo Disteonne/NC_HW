@@ -1,4 +1,4 @@
-package HW_ONE;
+package HW_ONE.partOne;
 
 public class Circle {
     private double radius=1.0;

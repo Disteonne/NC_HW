@@ -1,4 +1,4 @@
-package HW_ONE.triangle;
+package HW_ONE.partOne.triangle;
 
 public class MyTriangle {
     private MyPoint v1;
@@ -6,9 +6,9 @@ public class MyTriangle {
     private MyPoint v3;
 
     public MyTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-        v1=new MyPoint(x1,y1);
-        v2=new MyPoint(x2,y2);
-        v3=new MyPoint(x3,y3);
+        v1 = new MyPoint(x1, y1);
+        v2 = new MyPoint(x2, y2);
+        v3 = new MyPoint(x3, y3);
     }
 
     public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3) {
@@ -29,16 +29,15 @@ public class MyTriangle {
 
 
     public TrianglesType getTypes() {
-        double inaccuracy = 0.000001;
-        boolean twoSidesOne = (getDistance(v1, v2) - getDistance(v1, v3)) < inaccuracy;
-        boolean twoSidesTwo = (getDistance(v1, v3) - getDistance(v2, v3)) < inaccuracy;
-        boolean twoSidesThree = (getDistance(v1, v2) - getDistance(v2, v3)) < inaccuracy;
+        byte twoSidesOne = (byte) Double.compare(getDistance(v1, v2), getDistance(v1, v3));
+        byte twoSidesTwo = (byte) Double.compare(getDistance(v1, v3), getDistance(v2, v3));
+        byte twoSidesThree = (byte) Double.compare(getDistance(v1, v2), getDistance(v2, v3));
 
-        if(twoSidesOne & twoSidesTwo & twoSidesThree){
+        if (twoSidesOne==0 & twoSidesTwo==0 & twoSidesThree==0) {
             return TrianglesType.Equilateral;
-        }else if((twoSidesOne & twoSidesTwo )|| (twoSidesOne & twoSidesThree) || (twoSidesTwo & twoSidesThree)){
+        } else if ((twoSidesOne==0 & twoSidesTwo==0) | (twoSidesOne==0 & twoSidesThree==0) | (twoSidesTwo==0 & twoSidesThree==0)) {
             return TrianglesType.Isosceles;
-        }else {
+        } else {
             return TrianglesType.Scalene;
         }
     }
