@@ -8,14 +8,27 @@ public class Circle {
     }
 
     public Circle(double radius) {
+        useCheck();
         this.radius = radius;
     }
 
     public Circle(double radius, String color) {
+        useCheck();
         this.radius = radius;
         this.color = color;
     }
 
+    private void  checkRad(double radius) throws Exception {
+        if(radius<=0)
+            throw new Exception("Pay attention: radius MUST BE > 0 !");
+    }
+    private void useCheck(){
+        try {
+            checkRad(radius);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
     public double getRadius() {
         return radius;
     }
@@ -25,6 +38,7 @@ public class Circle {
     }
 
     public void setRadius(double radius) {
+        useCheck();
         this.radius = radius;
     }
 
@@ -36,7 +50,7 @@ public class Circle {
     public String toString() {
         return "Circle[" +
                 "radius=" + radius +
-                ", color='" + color + '\'' +
+                ", color=" + color +
                 ']';
     }
     public double getArea(){

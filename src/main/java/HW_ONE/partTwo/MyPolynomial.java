@@ -78,7 +78,7 @@ public class MyPolynomial {
     public MyPolynomial multiply(MyPolynomial right){
         double[] newCoeff=new double[this.coeffs.length+right.coeffs.length];
         //(a+b)(1+a+z)=a*1+a*a+a*z+b_+ba+bz
-        //[2,4][0,1,2]=2*0+2*1+2*2
+        //[2,4][0,1 ,2]=2*0+2*1+2*2
         //сумма индексов
         for (int i = 0; i < this.coeffs.length; i++) {
             for (int j = 0; j < right.coeffs.length; j++) {
