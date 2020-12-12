@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MyPolynomial {
-    double[] coeffs;
+    private double[] coeffs;
 
     public MyPolynomial(double... coeffs) {
         this.coeffs = coeffs;
@@ -19,25 +19,39 @@ public class MyPolynomial {
         return coeffs.length;
     }
 
+    double evaluate(double x){
+        double result=0.0;
+        for (int i = 0; i < coeffs.length; i++) {
+            result+=coeffs[i]*Math.pow(x,i);
+        }
+        return result;
+    }
+
     @Override
     public String toString() {
-        String result = "";
+        //String result = "";
+        StringBuffer result=new StringBuffer();
         for (int i = coeffs.length - 1; i >= 0; i--) {
             if (coeffs[i] == 0) {
                 continue;
             } else {
                 if (i != 1 && i != 0) {
-                    result += coeffs[i] > 0 ? "+" + coeffs[i] + "x^" + i : coeffs[i] + "x^" + i;
+                    //result += coeffs[i] > 0 ? "+" + coeffs[i] + "x^" + i : coeffs[i] + "x^" + i;
+                    result.append(coeffs[i] > 0 ? "+" + coeffs[i] + "x^" + i : coeffs[i] + "x^" + i);
                 }
                 if (i == 1) {
-                    result += coeffs[i] > 0 ? "+" + coeffs[i] + "x" : coeffs[i] + "x";
+                   // result += coeffs[i] > 0 ? "+" + coeffs[i] + "x" : coeffs[i] + "x";
+                    result.append(coeffs[i] > 0 ? "+" + coeffs[i] + "x" : coeffs[i] + "x");
                 }
                 if (i == 0) {
-                    result += coeffs[i] > 0 ? "+" + coeffs[i] : coeffs[i];
+                    //result += coeffs[i] > 0 ? "+" + coeffs[i] : coeffs[i];
+                    result.append(coeffs[i] > 0 ? "+" + coeffs[i] : coeffs[i]);
                 }
             }
         }
-        return result.startsWith("+") ? result.substring(1, result.length()) : result;
+        // String loses in speed.
+        String resString=result.toString();
+        return resString.startsWith("+") ? resString.substring(1, resString.length()) : resString;
     }
 
     public MyPolynomial add(MyPolynomial right) {

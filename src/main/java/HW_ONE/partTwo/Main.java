@@ -21,9 +21,16 @@ public class Main {
        double[] d2={1,2};
        MyPolynomial a2=new MyPolynomial(d2);
        System.out.println(a1.multiply(a2));
+       System.out.println(a1.evaluate(-1));
 
 
        System.out.println(Math.sin(30*Math.PI/180));
 
+       StringBuffer sb=new StringBuffer();
+       String[] s= {"mama","papa","daddy"};
+        for (int i = 0; i < s.length; i++) {
+            sb.append(s[i]);
+        }
+        System.out.println(sb.toString());
     }
 }
