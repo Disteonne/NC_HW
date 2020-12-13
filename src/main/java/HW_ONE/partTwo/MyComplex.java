@@ -36,7 +36,7 @@ public class MyComplex {
 
     @Override
     public String toString() {
-        return imag>0 ? "(" + real+" + "+ imag + "i)":"(" + real+ imag + "i)";
+        return imag>0 ? (imag==1.0 ? "(" + real+ "+i)":"(" + real+ "+"+imag + "i)"):(imag==-1.0 ? "(" + real+ "-i)":"(" + real+imag + "i)");
     }
 
     public boolean isReal() {
@@ -64,7 +64,7 @@ public class MyComplex {
 
     public double argument(){
         double tg=real/imag;
-        return Math.atan(tg);
+        return Math.atan(tg)*180/Math.PI;
     }
 
     public MyComplex add(MyComplex right){
@@ -84,13 +84,15 @@ public class MyComplex {
         return new MyComplex(real - right.real,imag - right.imag);
     }
     public MyComplex multiply(MyComplex right){
+        double realTemp=this.real;
         this.real=real*right.real-imag*right.imag;
-        this.imag=real* right.imag+imag*right.real;
+        this.imag=realTemp* right.imag+imag*right.real;
         return this;
     }
     public MyComplex divide(MyComplex right){
+        double realTemp=this.real;
         this.real=(real*right.real+imag*right.imag)/Math.pow(right.magnitude(),2);
-        this.imag=(right.real*imag-right.imag*real)/Math.pow(right.magnitude(),2);
+        this.imag=(right.real*imag-right.imag*realTemp)/Math.pow(right.magnitude(),2);
         return this;
     }
 

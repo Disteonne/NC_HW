@@ -35,7 +35,8 @@ public class MyTriangle {
 
         if (twoSidesOne==0 & twoSidesTwo==0 & twoSidesThree==0) {
             return TrianglesType.Equilateral;
-        } else if ((twoSidesOne==0 & twoSidesTwo==0) | (twoSidesOne==0 & twoSidesThree==0) | (twoSidesTwo==0 & twoSidesThree==0)) {
+            //(twoSidesOne==0 & twoSidesTwo==0) | (twoSidesOne==0 & twoSidesThree==0) | (twoSidesTwo==0 & twoSidesThree==0)
+        } else if (twoSidesOne ==0 | twoSidesTwo==0 | twoSidesThree==0) {
             return TrianglesType.Isosceles;
         } else {
             return TrianglesType.Scalene;
