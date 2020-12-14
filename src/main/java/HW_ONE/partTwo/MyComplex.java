@@ -97,7 +97,7 @@ public class MyComplex {
         return this;
     }
     public  MyComplex conjugate(){
-        return this;
+        return new MyComplex(this.real,-this.imag);
     }
 
 }
