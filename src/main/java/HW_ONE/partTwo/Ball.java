@@ -78,9 +78,13 @@ public class Ball {
     }
 
     private void checkDirection() throws Exception {
-        if(this.directions>=-180 && this.directions<=180){
+        if(this.directions<-180 && this.directions>180){
             throw new Exception("Out of bounds. -180<=Direction<=180.");
         }
     }
 
+    @Override
+    public String toString() {
+        return "Ball[("+x+","+y+"),speed=("+xDelta+","+yDelta+")]";
+    }
 }

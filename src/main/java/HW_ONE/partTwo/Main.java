@@ -2,35 +2,18 @@ package HW_ONE.partTwo;
 
 public class Main {
     public static void main(String[] args) {
-        MyComplex myComplex=new MyComplex(4,4);
-        System.out.println(myComplex.argument());
-        System.out.println(Double.compare(0.9,0.99));//0-равны
-        //1-не равны и правый меньше
-        //-1 -не равны и левый меньше
-
-
-        MyPolynomial myPolynomial=new MyPolynomial(1,2,3,4,5,6,7);
-        System.out.println(myPolynomial);
-
-       MyPolynomial myPolynomial1=new MyPolynomial(10,10,10,10,10,10,10,10,10,10);
-       MyPolynomial myPolynomial2=myPolynomial.add(myPolynomial1);
-       System.out.println(myPolynomial2);
-
-       double[] d1={1,2,1};
-       MyPolynomial a1=new MyPolynomial(d1);
-       double[] d2={1,2};
-       MyPolynomial a2=new MyPolynomial(d2);
-       System.out.println(a1.multiply(a2));
-       System.out.println(a1.evaluate(-1));
-
-
-       System.out.println(Math.sin(30*Math.PI/180));
-
-       StringBuffer sb=new StringBuffer();
-       String[] s= {"mama","papa","daddy"};
-        for (int i = 0; i < s.length; i++) {
-            sb.append(s[i]);
+        try {
+            Container container = new Container(0, 0, 15, 15);
+            Ball ball = new Ball(5, 5, 1, 1, 45);
+            do{
+                ball.move();
+                System.out.println(ball);
+            }while (container.collides(ball));
+            System.out.println("Ball out of bounds");
+        }catch (Exception ex){
+            ex.printStackTrace();
         }
-        System.out.println(sb.toString());
+
+
     }
 }
