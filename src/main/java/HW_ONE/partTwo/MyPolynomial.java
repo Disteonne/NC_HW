@@ -16,7 +16,7 @@ public class MyPolynomial {
         if (coeffs == null) {
             throw new NullPointerException();
         }
-        return coeffs.length;
+        return coeffs.length-1;
     }
 
     double evaluate(double x){
@@ -88,4 +88,7 @@ public class MyPolynomial {
         return  new MyPolynomial(newCoeff);
     }
 
+    public double[] getCoeffs() {
+        return coeffs;
+    }
 }

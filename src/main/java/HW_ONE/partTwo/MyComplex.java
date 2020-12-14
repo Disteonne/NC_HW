@@ -95,5 +95,8 @@ public class MyComplex {
         this.imag=(right.real*imag-right.imag*realTemp)/Math.pow(right.magnitude(),2);
         return this;
     }
+    public  MyComplex conjugate(){
+        return this;
+    }
 
 }
