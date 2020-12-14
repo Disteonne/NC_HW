@@ -1,6 +1,7 @@
 package HW_ONE.partTwo;
 
 import junit.framework.TestCase;
+import org.junit.Test;
 
 import java.text.DecimalFormat;
 
@@ -16,10 +17,12 @@ public class MyComplexTest extends TestCase {
     }
 
     public void testTestToString() {
-        assertEquals("(1.0+i)",complexOne.toString());
-        //assertEquals("(1.0-i)",new MyComplex(1,-1).toString());
+        assertEquals("(1.0+0.0i)",new MyComplex(1,0).toString());
+        //assertEquals("(0.0+0.0i)",new MyComplex().toString());
+        //assertEquals("(1.0-1.0i)",new MyComplex(1,-1).toString());
         //assertEquals("(-7.0+5.0i)",new MyComplex(-7.0,5.0).toString());
         //assertEquals("(3.0-2.0i)",new MyComplex(3.0,-2.0));
+        //assertEquals("(0.0-2.0i)",new MyComplex(0,-2.0).toString());
     }
 
     public void testIsReal() {
@@ -71,4 +74,5 @@ public class MyComplexTest extends TestCase {
         assertEquals("0,6",decimalFormatReal.format(myComplex.getReal()));
         assertEquals("0,8",decimalFormatReal.format(myComplex.getImag()));
     }
+
 }

@@ -1,4 +1,5 @@
 package HW_ONE.partOne.triangle;
+import  HW_ONE.partOne.MyPoint;
 
 import junit.framework.TestCase;
 

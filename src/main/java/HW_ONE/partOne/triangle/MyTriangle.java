@@ -1,4 +1,5 @@
 package HW_ONE.partOne.triangle;
+import  HW_ONE.partOne.MyPoint;
 
 public class MyTriangle {
     private MyPoint v1;
@@ -11,7 +12,7 @@ public class MyTriangle {
         v3 = new MyPoint(x3, y3);
     }
 
-    public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3) {
+    public MyTriangle(MyPoint v1, MyPoint v2, MyPoint  v3) {
         this.v1 = v1;
         this.v2 = v2;
         this.v3 = v3;
@@ -24,26 +25,21 @@ public class MyTriangle {
     }
 
     public double getPerimeter() {
-        return getDistance(v1, v2) + getDistance(v1, v3) + getDistance(v2, v3);
+        return v1.distance(v2) + v1.distance(v3) + v2.distance(v3);
     }
 
 
     public TrianglesType getTypes() {
-        byte twoSidesOne = (byte) Double.compare(getDistance(v1, v2), getDistance(v1, v3));
-        byte twoSidesTwo = (byte) Double.compare(getDistance(v1, v3), getDistance(v2, v3));
-        byte twoSidesThree = (byte) Double.compare(getDistance(v1, v2), getDistance(v2, v3));
+        byte twoSidesOne = (byte) Double.compare(v1.distance(v2),v1.distance(v3));
+        byte twoSidesTwo = (byte) Double.compare(v1.distance(v3),v2.distance(v3));
+        byte twoSidesThree = (byte) Double.compare(v1.distance(v2),v2.distance(v3));
 
         if (twoSidesOne==0 & twoSidesTwo==0 & twoSidesThree==0) {
             return TrianglesType.Equilateral;
-            //(twoSidesOne==0 & twoSidesTwo==0) | (twoSidesOne==0 & twoSidesThree==0) | (twoSidesTwo==0 & twoSidesThree==0)
         } else if (twoSidesOne ==0 | twoSidesTwo==0 | twoSidesThree==0) {
             return TrianglesType.Isosceles;
         } else {
             return TrianglesType.Scalene;
         }
-    }
-
-    private double getDistance(MyPoint pointOne, MyPoint pointTwo) {
-        return Math.sqrt(Math.pow(pointOne.getX() - pointTwo.getX(), 2) + Math.pow(pointOne.getY() - pointTwo.getY(), 2));
     }
 }
