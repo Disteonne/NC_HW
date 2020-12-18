@@ -1,39 +1,40 @@
 package HW_ONE.partOne.book;
 
-/*
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class BookTest extends TestCase {
+public class BookTest{
 
-    private Author a1=new Author("Lewis Carroll","carrol@gmail.ru",'m');//m->male
-    private Author a2=new Author("John Tenniel","john.tenn@gmail.ru",'m');
 
-    private Book book=new Book("Alice's Adventures in Wonderland",authors(a1,a2),1000,2);
+    private Book book=new Book("Alice's Adventures in Wonderland",authors(),1000,2);
+    @Test
     public void testTestGetName() {
         assertEquals("Alice's Adventures in Wonderland",book.getName());
     }
-
+    @Test
     public void testGetAuthors() {
-        Author[] a=book.getAuthors();
-        assertEquals("John Tenniel",a[1].getName());
+        assertEquals("John Tenniel",book.getAuthors()[1].getName());
     }
-
+    @Test
     public void testGetPrice() {
         assertEquals(1000.0,book.getPrice());
     }
-
+    @Test
     public void testGetQty() {
         assertEquals(2,book.getQty());
     }
-
+    @Test
     public void testGetAuthorName() {
         assertEquals("Lewis Carroll,John Tenniel",book.getAuthorName());
     }
 
-    private Author[] authors(Author... a){
-        Author[] arrayAuthors=a;
+    private Author[] authors(){
+        Author[] arrayAuthors=new Author[]{
+                new Author("Lewis Carroll","carrol@gmail.ru",'m'),
+                new Author("John Tenniel","john.tenn@gmail.ru",'m')
+        };
         return arrayAuthors;
     }
 }
 
- */

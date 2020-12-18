@@ -2,11 +2,9 @@ package HW_ONE.partOne;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.text.DecimalFormat;
 
 public class CircleTest  {
     private  DecimalFormat decimalFormatReal=new DecimalFormat("#.#");
@@ -51,12 +49,10 @@ public class CircleTest  {
     }
     @Test
     public void testGetLengthCircle() {
-        Circle newCircle=new Circle(1/Math.PI,"1");
         assertEquals(2.0,getGood[3].getLengthCircle());
     }
     @Test
     public void testGetArcLength() {
-        Circle newCircle=new Circle(1/Math.PI,"1");
         assertEquals(1.0,getGood[3].getArcLength(180));
     }
     @Test

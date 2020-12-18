@@ -1,26 +1,36 @@
 package HW_ONE.partOne.triangle;
 import  HW_ONE.partOne.MyPoint;
-/*
-import junit.framework.TestCase;
 
-public class MyTriangleTest extends TestCase {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-    private MyPoint myPointOne=new MyPoint(-2,0);
-    private MyPoint myPointTwo=new MyPoint(2,0);
-    private MyPoint myPointThree=new MyPoint(0,2);
-    private MyTriangle triangle=new MyTriangle(myPointOne,myPointTwo,myPointThree);
+import static org.junit.jupiter.api.Assertions.*;
+
+public class MyTriangleTest  {
+
+    private MyTriangle[] triangles;
+
+    private MyTriangle[] getTriangle(){
+        triangles=new MyTriangle[]{
+                new MyTriangle(new MyPoint(-2, 0),new MyPoint(2, 0),new MyPoint(0,2)),
+                new MyTriangle(0,0,0,4,-3,0)
+        };
+        return triangles;
+    }
+
+
+    @Test
     public void testTestToString() {
-        assertEquals("MyTriangle[v1=(-2,0),v2=(2,0),v3=(0,2)",triangle.toString());
+        assertEquals("MyTriangle[v1=(-2,0),v2=(2,0),v3=(0,2)",getTriangle()[0].toString());
     }
 
+    @Test
     public void testGetPerimeter() {
-        MyTriangle triangle=new MyTriangle(0,0,0,4,-3,0);
-        assertEquals(12.0,triangle.getPerimeter());
+        assertEquals(12.0,getTriangle()[1].getPerimeter());
     }
-
+    @Test
     public void testGetTypes() {
-        assertEquals(TrianglesType.Isosceles,triangle.getTypes());
+        assertEquals(TrianglesType.Isosceles,getTriangle()[0].getTypes());
     }
 }
 
- */
