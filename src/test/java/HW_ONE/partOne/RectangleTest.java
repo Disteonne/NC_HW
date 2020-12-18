@@ -1,5 +1,5 @@
 package HW_ONE.partOne;
-
+/*
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -47,3 +47,5 @@ public class RectangleTest extends TestCase {
         assertEquals(5.0,rectangle.getDiagonal());
     }
 }
+
+ */

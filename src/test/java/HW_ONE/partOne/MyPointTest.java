@@ -1,5 +1,5 @@
 package HW_ONE.partOne;
-
+/*
 import junit.framework.TestCase;
 
 public class MyPointTest extends TestCase {
@@ -32,3 +32,5 @@ public class MyPointTest extends TestCase {
         assertEquals(5.0,pointThree.distance());
     }
 }
+
+ */

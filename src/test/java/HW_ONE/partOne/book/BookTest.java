@@ -1,5 +1,6 @@
 package HW_ONE.partOne.book;
 
+/*
 import junit.framework.TestCase;
 
 public class BookTest extends TestCase {
@@ -34,3 +35,5 @@ public class BookTest extends TestCase {
         return arrayAuthors;
     }
 }
+
+ */

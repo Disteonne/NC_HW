@@ -1,5 +1,5 @@
 package HW_ONE.partTwo;
-
+/*
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -24,7 +24,8 @@ public class MyComplexTest extends TestCase {
         //assertEquals("(3.0-2.0i)",new MyComplex(3.0,-2.0));
         //assertEquals("(0.0-2.0i)",new MyComplex(0,-2.0).toString());
     }
-
+*/
+/*
     public void testIsReal() {
         assertEquals(false,new MyComplex(0,-2).isReal());
     }
@@ -76,3 +77,5 @@ public class MyComplexTest extends TestCase {
     }
 
 }
+
+ */

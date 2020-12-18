@@ -1,5 +1,5 @@
 package HW_ONE.partTwo;
-
+/*
 import junit.framework.TestCase;
 
 public class MyPolynomialTest extends TestCase {
@@ -41,3 +41,5 @@ public class MyPolynomialTest extends TestCase {
         return new MyPolynomial(coefficients);
     }
 }
+
+ */

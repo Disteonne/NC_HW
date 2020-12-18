@@ -1,6 +1,6 @@
 package HW_ONE.partOne.triangle;
 import  HW_ONE.partOne.MyPoint;
-
+/*
 import junit.framework.TestCase;
 
 public class MyTriangleTest extends TestCase {
@@ -22,3 +22,5 @@ public class MyTriangleTest extends TestCase {
         assertEquals(TrianglesType.Isosceles,triangle.getTypes());
     }
 }
+
+ */
