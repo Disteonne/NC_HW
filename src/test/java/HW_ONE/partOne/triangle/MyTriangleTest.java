@@ -3,15 +3,13 @@ import  HW_ONE.partOne.MyPoint;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MyTriangleTest  {
 
-    private MyTriangle[] triangles;
 
     private MyTriangle[] getTriangle(){
-        triangles=new MyTriangle[]{
+        MyTriangle[] triangles=new MyTriangle[]{
                 new MyTriangle(new MyPoint(-2, 0),new MyPoint(2, 0),new MyPoint(0,2)),
                 new MyTriangle(0,0,0,4,-3,0)
         };

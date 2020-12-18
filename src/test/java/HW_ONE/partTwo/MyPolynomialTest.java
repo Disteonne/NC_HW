@@ -1,29 +1,30 @@
 package HW_ONE.partTwo;
-/*
-import junit.framework.TestCase;
 
-public class MyPolynomialTest extends TestCase {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
+public class MyPolynomialTest{
 
-
+    @Test
     public void testGetDegree() {
         assertEquals(8,getPolOne().getDegree());
     }
-
+    @Test
     public void testEvaluate() {
         assertEquals( -5.0,getPolOne().evaluate(0.0));
     }
-
+    @Test
     public void testTestToString() {
         assertEquals("3.0x^6+5.0x^4-4.0x^2-9.0x+21.0",getPolTwo().toString());
     }
-
+    @Test
     public void testAdd() {
         //double[] result={16,-7,4,-3,2,0,4,0,1};
         MyPolynomial myPolynomial=getPolOne();
         assertEquals("1.0x^8+4.0x^6+2.0x^4-3.0x^3+4.0x^2-7.0x+16.0",myPolynomial.add(getPolTwo()).toString());
     }
-
+    @Test
     public void testMultiply() {
         //double[] result={-105,87,170,-143,-93,49,58,-18,26,-18,-8,0,8,0,3};
         MyPolynomial myPolynomial=getPolOne();
@@ -41,5 +42,3 @@ public class MyPolynomialTest extends TestCase {
         return new MyPolynomial(coefficients);
     }
 }
-
- */

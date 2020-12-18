@@ -1,81 +1,128 @@
 package HW_ONE.partTwo;
-/*
-import junit.framework.TestCase;
-import org.junit.Test;
 
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import java.text.DecimalFormat;
 
-public class MyComplexTest extends TestCase {
+public class MyComplexTest{
 
+    private DecimalFormat decimalFormatReal=new DecimalFormat("#.#");
     private MyComplex complexOne=new MyComplex(1,1);
+
+    private MyComplex[] myComplexes(){
+    MyComplex[] myComplexes=new MyComplex[]{
+            new MyComplex(1,1),
+            new MyComplex(1,0),
+            new MyComplex(),
+            new MyComplex(-7.0,5.0),
+            new MyComplex(0,-2),
+            new MyComplex(-2,0),
+            new MyComplex(3,-7),
+            new MyComplex(-4,1),
+            new MyComplex(12,5),
+            new MyComplex(-1,1),
+            new MyComplex(3,5),
+            new MyComplex(2,1),
+            new MyComplex(2,-1)
+    };
+    return myComplexes;
+    }
+    @Test
     public void testGetReal() {
-        assertEquals(1.0,complexOne.getReal());
+        assertEquals(1.0,myComplexes()[0].getReal());
     }
-
+    @Test
     public void testGetImag() {
-        assertEquals(1.0,complexOne.getImag());
+        assertEquals(1.0,myComplexes()[0].getImag());
     }
-
-    public void testTestToString() {
-        assertEquals("(1.0+0.0i)",new MyComplex(1,0).toString());
-        //assertEquals("(0.0+0.0i)",new MyComplex().toString());
-        //assertEquals("(1.0-1.0i)",new MyComplex(1,-1).toString());
-        //assertEquals("(-7.0+5.0i)",new MyComplex(-7.0,5.0).toString());
-        //assertEquals("(3.0-2.0i)",new MyComplex(3.0,-2.0));
-        //assertEquals("(0.0-2.0i)",new MyComplex(0,-2.0).toString());
+    @Test
+    public void testTestToStringOne() {
+        assertEquals("(1.0+0.0i)",myComplexes()[1].toString());
     }
-*/
-/*
+    @Test
+    public void testTestToStringTwo(){
+    assertEquals("(0.0+0.0i)",myComplexes()[2].toString());
+    }
+    @Test
+    public void testTestToString(){
+        assertEquals("(-7.0+5.0i)",myComplexes()[3].toString());
+    }
+    @Test
     public void testIsReal() {
-        assertEquals(false,new MyComplex(0,-2).isReal());
+        assertEquals(false,myComplexes()[4].isReal());
     }
-
+    @Test
     public void testIsImaginary() {
-        assertEquals(false,new MyComplex(-2,0).isImaginary());
+        assertFalse(myComplexes()[5].isImaginary());
     }
-
+    @Test
     public void testTestEquals() {
-        assertEquals(true,new MyComplex(1,1).equals(new MyComplex(1,1)));
+        assertTrue(myComplexes()[0].equals(myComplexes()[0]));
     }
-
+    @Test
     public void testArgument() {
-        assertEquals(45.0,complexOne.argument());
+        assertEquals(45.0,myComplexes()[0].argument());
+    }
+    @Test
+    public void testAddReal() {
+        assertEquals(4.0,addMethod().getReal());
+    }
+    @Test
+    public void testAddImag() {
+        assertEquals(-6.0,addMethod().getImag());
     }
 
-    public void testAdd() {
-        MyComplex myComplex=new MyComplex(1,1);
-        MyComplex myComplex1=new MyComplex(3,-7);
-        myComplex.add(myComplex1);
-        assertEquals(4.0,myComplex.getReal());
-        assertEquals(-6.0,myComplex.getImag());
+
+    @Test
+    public void testSubtractReal() {
+        assertEquals(-16.0,subMethod().getReal());
+    }
+    @Test
+    public void testSubtractImag(){
+        assertEquals(-4.0,subMethod().getImag());
+    }
+    @Test
+    public void testMultiplyReal() {
+        assertEquals(-8.0,multiMethod().getReal());
+    }
+    @Test
+    public void testMultiplyImag() {
+        assertEquals(-2.0,multiMethod().getImag());
+    }
+    @Test
+    public void testDivideReal() {
+        assertEquals("0,6",decimalFormatReal.format(divideMethod().getReal()));
+    }
+    @Test
+    public void testDivideImag() {
+        assertEquals("0,8",decimalFormatReal.format(divideMethod().getImag()));
     }
 
-    public void testSubtract() {
-        MyComplex myComplex=new MyComplex(-4,1);
-        MyComplex myComplex1=new MyComplex(12,5);
-        myComplex.subtract(myComplex1);
-        assertEquals(-16.0,myComplex.getReal());
-        assertEquals(-4.0,myComplex.getImag());
+
+    private MyComplex addMethod(){
+        MyComplex newComplex=myComplexes()[0];
+        newComplex.add(myComplexes()[6]);
+        return newComplex;
     }
 
-    public void testMultiply() {
-        MyComplex myComplex=new MyComplex(-1,1);
-        MyComplex myComplex1=new MyComplex(3,5);
-        myComplex.multiply(myComplex1);
-        assertEquals(-8.0,myComplex.getReal());
-        assertEquals(-2.0,myComplex.getImag());
-
+    private MyComplex subMethod(){
+        MyComplex newComplex=myComplexes()[7];
+        newComplex.subtract(myComplexes()[8]);
+        return newComplex;
     }
 
-    public void testDivide() {
-        MyComplex myComplex=new MyComplex(2,1);
-        MyComplex myComplex1=new MyComplex(2,-1);
-        myComplex.divide(myComplex1);
-        DecimalFormat decimalFormatReal=new DecimalFormat("#.#");
-        assertEquals("0,6",decimalFormatReal.format(myComplex.getReal()));
-        assertEquals("0,8",decimalFormatReal.format(myComplex.getImag()));
+    private MyComplex multiMethod(){
+        MyComplex newComplex=myComplexes()[9];
+        newComplex.multiply(myComplexes()[10]);
+        return newComplex;
     }
 
+    private MyComplex divideMethod(){
+        MyComplex newComplex=myComplexes()[11];
+        newComplex.divide(myComplexes()[12]);
+        return newComplex;
+    }
 }
 
- */

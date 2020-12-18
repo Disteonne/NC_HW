@@ -1,36 +1,42 @@
 package HW_ONE.partOne;
-/*
-import junit.framework.TestCase;
 
-public class MyPointTest extends TestCase {
-    private MyPoint pointOne=new MyPoint(1,6);
-    private MyPoint pointTwo=new MyPoint(4,2);
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
+public class MyPointTest{
+
+    private MyPoint[] getMyPoints(){
+        MyPoint[] points=new MyPoint[]{
+                new MyPoint(1,6),
+                new MyPoint(4,2),
+                new MyPoint(4,3)
+        };
+        return points;
+    }
+
+    @Test
     public void testGetX() {
-        assertEquals(1,pointOne.getX());
+        assertEquals(1,getMyPoints()[0].getX());
     }
-
+    @Test
     public void testGetY() {
-        assertEquals(2,pointTwo.getY());
+        assertEquals(2,getMyPoints()[1].getY());
     }
-
+    @Test
     public void testGetXY() {
-        int[] points=pointTwo.getXY();
-        assertEquals(4,points[0]);
+        assertEquals(4,getMyPoints()[1].getXY()[0]);
     }
-
+    @Test
     public void testDistance() {
-        assertEquals(5.0,pointOne.distance(4,2));
+        assertEquals(5.0,getMyPoints()[0].distance(getMyPoints()[1].getX(),getMyPoints()[1].getY()));
     }
-
+    @Test
     public void testTestDistance() {
-        assertEquals(5.0,pointOne.distance(pointTwo));
+        assertEquals(5.0,getMyPoints()[0].distance(getMyPoints()[1]));
     }
-
+    @Test
     public void testTestDistance1() {
-        MyPoint pointThree=new MyPoint(4,3);
-        assertEquals(5.0,pointThree.distance());
+        assertEquals(5.0,getMyPoints()[2].distance());
     }
 }
-
- */

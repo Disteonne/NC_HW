@@ -28,18 +28,18 @@ public class Rectangle {
 
     public void setLength(float length) throws Exception {
         if(length<=0)
-            throw new Exception("Pay attention: length MUST BE > 0 !");
+            throw new Exception();//"Pay attention: length MUST BE > 0 !"
         this.length = length;
     }
 
     private void checkSides(float length, float wight) throws Exception {
         if(length<=0 | wight<=0){
-            throw new Exception("Pay attention: length and wight MUST BE > 0 !");
+            throw new Exception("Pay attention: length and wight MUST BE > 0 !");//"Pay attention: length and wight MUST BE > 0 !"
         }
     }
     public void setWight(float wight) throws Exception {
         if(wight<=0)
-            throw new Exception("Pay attention: wight MUST BE > 0 !");
+            throw new Exception();//"Pay attention: wight MUST BE > 0 !"
         this.wight = wight;
     }
     public double getArea(){
