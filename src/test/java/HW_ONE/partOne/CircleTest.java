@@ -1,5 +1,6 @@
 package HW_ONE.partOne;
 
+import HW_ONE.firstHomeWork.partOne.Circle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

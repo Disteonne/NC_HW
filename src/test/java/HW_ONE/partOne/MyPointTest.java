@@ -1,6 +1,6 @@
 package HW_ONE.partOne;
 
-import org.junit.jupiter.api.Assertions;
+import HW_ONE.firstHomeWork.partOne.MyPoint;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,9 +1,5 @@
-package HW_ONE.partTwo;
+package HW_ONE.firstHomeWork.partTwo;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MyPolynomial {
     private double[] coeffs;

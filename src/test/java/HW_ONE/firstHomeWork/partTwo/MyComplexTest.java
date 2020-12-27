@@ -1,7 +1,6 @@
-package HW_ONE.partTwo;
+package HW_ONE.firstHomeWork.partTwo;
 
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.text.DecimalFormat;

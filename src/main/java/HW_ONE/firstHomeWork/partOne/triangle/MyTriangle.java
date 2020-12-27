@@ -1,5 +1,5 @@
-package HW_ONE.partOne.triangle;
-import  HW_ONE.partOne.MyPoint;
+package HW_ONE.firstHomeWork.partOne.triangle;
+import HW_ONE.firstHomeWork.partOne.MyPoint;
 
 public class MyTriangle {
     private MyPoint v1;

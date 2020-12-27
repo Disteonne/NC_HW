@@ -1,4 +1,4 @@
-package HW_ONE.partTwo;
+package HW_ONE.firstHomeWork.partTwo;
 
 public class Container {
     private int x1;

@@ -1,4 +1,4 @@
-package HW_ONE.partOne;
+package HW_ONE.firstHomeWork.partOne;
 
 public class Employee {
     private int id;

@@ -1,7 +1,8 @@
 package HW_ONE.partOne.triangle;
-import  HW_ONE.partOne.MyPoint;
+import HW_ONE.firstHomeWork.partOne.MyPoint;
 
-import org.junit.jupiter.api.Assertions;
+import HW_ONE.firstHomeWork.partOne.triangle.MyTriangle;
+import HW_ONE.firstHomeWork.partOne.triangle.TrianglesType;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

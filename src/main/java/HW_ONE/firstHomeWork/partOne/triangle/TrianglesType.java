@@ -1,4 +1,4 @@
-package HW_ONE.partOne.triangle;
+package HW_ONE.firstHomeWork.partOne.triangle;
 
 public enum TrianglesType {
 

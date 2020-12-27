@@ -1,6 +1,7 @@
 package HW_ONE.partOne.book;
 
-import org.junit.jupiter.api.Assertions;
+import HW_ONE.firstHomeWork.partOne.book.Author;
+import HW_ONE.firstHomeWork.partOne.book.Book;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
