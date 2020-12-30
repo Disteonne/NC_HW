@@ -6,6 +6,7 @@ public class MagicSquareFourteen {
 
     public boolean magicSquare(int[][] array) {
         if (array.length != array[0].length) {
+            System.out.println("not square");
             return false; //not square
         } else {
             int sumStrHorizon = 0;
@@ -25,36 +26,36 @@ public class MagicSquareFourteen {
                     }
                 }
                 horizon.add(sumStrHorizon);
-                sumStrHorizon=0;
+                sumStrHorizon = 0;
             }
             for (int j = 0; j < array[0].length; j++) {
                 for (int i = 0; i < array.length; i++) {
                     sumStrVertical += array[i][j];
                 }
-                vertical.add(sumStrHorizon);
-                sumStrHorizon=0;
+                vertical.add(sumStrVertical);
+                sumStrVertical = 0;
             }
+            byte countCompareVertic = 0;
+            byte countCompareHoriz = 0;
+            for (int i = 0; i < vertical.size() - 1; i++) {
+                if (vertical.get(i).equals(vertical.get(i + 1)))
+                    countCompareVertic++;
+                if (horizon.get(i).equals(horizon.get(i + 1)))
+                    countCompareHoriz++;
+            }
+
             int result = 0;
             byte count = 0;
             for (int i = 0; i < horizon.size(); i++) {
-                if (horizon.get(i) == vertical.get(i)) {
+                if (horizon.get(i).equals(vertical.get(i))) {
                     count++;
-                    result=horizon.get(0);
+                    result = horizon.get(0);
                 }
             }
-            if (count == array.length) {
-                if (sumStrDiagonalOne == sumStrDiagonalTwo & sumStrDiagonalOne == result) {
-                    return true;
-                } else
-                    return false;
-            }else
+            if (count == array.length & countCompareHoriz == array.length-1 & countCompareVertic == array.length-1) {
+                return sumStrDiagonalOne == sumStrDiagonalTwo & sumStrDiagonalOne == result;
+            } else
                 return false;
         }
     }
-
-        public static void main (String[]args){
-            int[][] arr = new int[][]{{14, 0, 10}, {4, 8, 12}, {6, 16, 2}};
-            MagicSquareFourteen square = new MagicSquareFourteen();
-            System.out.print(square.magicSquare(arr));
-        }
-    }
+}
