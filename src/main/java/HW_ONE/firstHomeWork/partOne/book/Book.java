@@ -1,6 +1,9 @@
 package HW_ONE.firstHomeWork.partOne.book;
 
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Book {
     private String name;
     private Author[] authors;
@@ -64,5 +67,26 @@ public class Book {
         }
         names=names.substring(0,names.length()-1);
         return names;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Double.compare(book.price, price) == 0 &&
+                qty == book.qty &&
+                Objects.equals(name, book.name) &&
+                Arrays.equals(authors, book.authors);
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        int result=31*hashCode+name.hashCode();
+        result=31*result+ (int) price;
+        result=31*result+qty;
+        result = 31 * result + Arrays.hashCode(authors);
+        return result;
     }
 }

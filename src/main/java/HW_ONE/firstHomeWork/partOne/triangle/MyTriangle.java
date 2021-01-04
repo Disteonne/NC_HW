@@ -1,6 +1,8 @@
 package HW_ONE.firstHomeWork.partOne.triangle;
 import HW_ONE.firstHomeWork.partOne.MyPoint;
 
+import java.util.Objects;
+
 public class MyTriangle {
     private MyPoint v1;
     private MyPoint v2;
@@ -41,5 +43,24 @@ public class MyTriangle {
         } else {
             return TrianglesType.Scalene;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyTriangle that = (MyTriangle) o;
+        return Objects.equals(v1, that.v1) &&
+                Objects.equals(v2, that.v2) &&
+                Objects.equals(v3, that.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        int result=31*hashCode+v1.hashCode();
+        result=31*result+v2.hashCode();
+        result=31*result+v3.hashCode();
+        return result;
     }
 }

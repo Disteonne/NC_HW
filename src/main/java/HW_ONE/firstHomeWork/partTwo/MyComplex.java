@@ -1,6 +1,8 @@
 package HW_ONE.firstHomeWork.partTwo;
 
 
+import java.util.Objects;
+
 public class MyComplex {
     private double real = 0.0;
     private double imag = 0.0;
@@ -100,4 +102,20 @@ public class MyComplex {
         return new MyComplex(this.real,-this.imag);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyComplex myComplex = (MyComplex) o;
+        return Double.compare(myComplex.real, real) == 0 &&
+                Double.compare(myComplex.imag, imag) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        int result=31*hashCode+(int) real;
+        result=31*result+ (int) imag;
+        return result;
+    }
 }

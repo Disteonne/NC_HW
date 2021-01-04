@@ -1,5 +1,7 @@
 package HW_ONE.firstHomeWork.partOne;
 
+import java.util.Objects;
+
 public class Employee {
     private int id;
     private String firstName;
@@ -46,5 +48,26 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee[id="+id+",name="+firstName+" "+lastName+",salary="+salary+"]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id &&
+                salary == employee.salary &&
+                Objects.equals(firstName, employee.firstName) &&
+                Objects.equals(lastName, employee.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        int result=31*hashCode+id;
+        result=31*result+firstName.hashCode();
+        result=31*result+lastName.hashCode();
+        result=31*result+salary;
+        return result;
     }
 }

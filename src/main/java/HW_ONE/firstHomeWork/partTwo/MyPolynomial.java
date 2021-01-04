@@ -1,6 +1,8 @@
 package HW_ONE.firstHomeWork.partTwo;
 
 
+import java.util.Arrays;
+
 public class MyPolynomial {
     private double[] coeffs;
 
@@ -86,5 +88,19 @@ public class MyPolynomial {
 
     public double[] getCoeffs() {
         return coeffs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyPolynomial that = (MyPolynomial) o;
+        return Arrays.equals(coeffs, that.coeffs);
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        return 31*hashCode + Arrays.hashCode(coeffs);
     }
 }

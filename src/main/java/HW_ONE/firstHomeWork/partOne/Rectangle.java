@@ -1,6 +1,8 @@
 package HW_ONE.firstHomeWork.partOne;
 
 
+import java.util.Objects;
+
 public class Rectangle {
     private float length=1.0f;
     private float wight=1.0f;
@@ -58,5 +60,22 @@ public class Rectangle {
     }
     public double getDiagonal(){
         return Math.sqrt(Math.pow(wight,2)+Math.pow(length,2));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return Float.compare(rectangle.length, length) == 0 &&
+                Float.compare(rectangle.wight, wight) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode=super.hashCode();
+        int result=31*hashCode+ (int) length;
+        result=31*result+ (int) wight;
+        return result;
     }
 }
