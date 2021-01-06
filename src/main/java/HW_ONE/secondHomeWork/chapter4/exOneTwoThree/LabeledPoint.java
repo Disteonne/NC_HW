@@ -1,4 +1,4 @@
-package HW_ONE.secondHomeWork.chapter4.exOne;
+package HW_ONE.secondHomeWork.chapter4.exOneTwoThree;
 
 import java.util.Objects;
 

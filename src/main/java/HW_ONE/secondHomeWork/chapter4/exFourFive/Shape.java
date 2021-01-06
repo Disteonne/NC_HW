@@ -1,6 +1,6 @@
-package HW_ONE.secondHomeWork.chapter4.exFour;
+package HW_ONE.secondHomeWork.chapter4.exFourFive;
 
-import HW_ONE.secondHomeWork.chapter4.exOne.Point;
+import HW_ONE.secondHomeWork.chapter4.exOneTwoThree.Point;
 
 public abstract class Shape {
     private Point point;
