@@ -1,47 +1,51 @@
 package HW_ONE.secondHomeWork.chapter2;
 
+import jdk.nashorn.internal.runtime.ECMAException;
+
 public class Car {
-    private double x; //miles
+    private double x; //pixels
     private double gallons; //1 gallon=4.55l
-    private double volume;
-    private double distance;
+    private double miles;
+    private double milesGallons;
 
-    //2 gallons = 62 miles -> 1 gal=32 miles OR 1 mile=1/32 gal
 
-    public Car(double miles, double gallons) {
-        this.x = miles;
-        this.gallons = gallons;
-        this.volume=this.gallons*4.55; //litr
-        this.distance=miles;
+    public Car(int milesGallons){
+        this.milesGallons=milesGallons;
     }
 
-    public void  addGallons(int plusGallons){
+    public void  addGallons(int plusGallons) throws Exception {
+        if (plusGallons<0){
+            throw new Exception("Gallons must be > 0");
+        }
         this.gallons+=plusGallons;
-        this.volume+=plusGallons*4.55;
     }
-    //  1m=1/32 gall
-    //  0.5m=1/32 * 0.5 gall
-    //  1m= (4.55/32) litr
-    public void addMiles(double plusMile){
-        double temp=this.volume - (4.55/32)*plusMile;
-        if(temp>=0) {
-            this.volume -= 0.14 * plusMile;
-            this.distance += plusMile;
-        }else
-            System.out.println("Volume is empty. Need gallons. Car is stoped");
 
+    public void addMiles(double plusMile) throws Exception {
+        while (milesGallons<=gallons){
+            if(plusMile<0)
+                throw new Exception("Miles must be > 0");
+            else if(plusMile==0)
+                break;
+            else {
+                x+=10; // pixel
+                miles++;
+                plusMile--;
+                gallons-=milesGallons;
+            }
+        }
     }
     public double getMiles(){
-        return distance-this.x;
+        return miles;
     }
 
     public double getGallons(){
-        return volume*4.55;
+        return gallons;
     }
 
 
     public static void main(String[] args) {
 
+        /*
         Car car=new Car(0,1);
         car.addMiles(32);
         System.out.println(car.getMiles());
@@ -59,7 +63,7 @@ public class Car {
             tmp+=1;
             System.out.println(car.getMiles());
         }
-
+         */
 
     }
 }
