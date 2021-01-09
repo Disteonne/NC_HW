@@ -4,7 +4,7 @@ import jdk.nashorn.internal.runtime.ECMAException;
 
 public class Car {
     private double x; //pixels
-    private double gallons; //1 gallon=4.55l
+    private double gallons;
     private double miles;
     private double milesGallons;
 
@@ -42,28 +42,4 @@ public class Car {
         return gallons;
     }
 
-
-    public static void main(String[] args) {
-
-        /*
-        Car car=new Car(0,1);
-        car.addMiles(32);
-        System.out.println(car.getMiles());
-        car.addMiles(1);
-        System.out.println(car.getMiles());
-        car.addGallons(2);
-        car.addMiles(17);
-        System.out.println(car.getMiles());
-        car.addMiles(12);
-        System.out.println(car.getMiles());
-
-        double tmp=1;
-        while (tmp<=12){
-            car.addMiles(4);
-            tmp+=1;
-            System.out.println(car.getMiles());
-        }
-         */
-
-    }
 }

@@ -45,7 +45,6 @@ public class IntSequenceImpl implements  IntSequence {
         //intSequence.constant(5);
 
 
-
         // OR
         /*
         IntSequence intSequence2=(int...val) -> {
