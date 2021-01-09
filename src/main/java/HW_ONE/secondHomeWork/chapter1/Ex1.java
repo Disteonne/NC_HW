@@ -1,7 +1,7 @@
 package HW_ONE.secondHomeWork.chapter1;
 
 
-public class NumberSystemOne {
+public class Ex1 {
 
     public static int number;
 

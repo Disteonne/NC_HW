@@ -1,6 +1,6 @@
 package HW_ONE.secondHomeWork.chapter1;
 
-public class MinMaxDoubleFour {
+public class Ex4 {
 
     public static double getMin(double valuesOne,double valuesTwo){
         int compare=Double.compare(Math.nextUp(valuesOne),Math.nextUp(valuesTwo));

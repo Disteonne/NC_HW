@@ -1,6 +1,6 @@
 package HW_ONE.secondHomeWork.chapter1;
 
-public class MinMaxThree {
+public class Ex3 {
 
     public static String getMinMax(int valueOne,int valueTwo,int valueThree){
         if (valueOne==valueTwo && valueOne==valueThree){

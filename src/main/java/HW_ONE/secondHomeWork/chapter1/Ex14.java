@@ -2,7 +2,7 @@ package HW_ONE.secondHomeWork.chapter1;
 
 import java.util.ArrayList;
 
-public class MagicSquareFourteen {
+public class Ex14 {
 
     public boolean magicSquare(int[][] array) {
         if (array.length != array[0].length) {

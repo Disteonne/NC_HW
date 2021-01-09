@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class StringEight {
+public class Ex8 {
 
     public void readString(){
         try(BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in))) {

@@ -4,21 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StringNineTest {
+class Ex9Test {
 
     @Test
     public void testEqualsStringTrue(){
-        assertTrue(StringNine.equalsString("Happy new year!","Happy new year!"));
+        assertTrue(Ex9.equalsString("Happy new year!","Happy new year!"));
     }
 
     @Test
     public void testEqualsStringFalse(){
-        assertFalse(StringNine.equalsString("Hello!","Happy new year!"));
+        assertFalse(Ex9.equalsString("Hello!","Happy new year!"));
     }
 
     @Test
     public void testEqualsStringCaseIgnoreTrue(){
-        assertTrue(StringNine.equalsStringCaseIgnore("Happy new year!","hApPy New Year!"));
+        assertTrue(Ex9.equalsStringCaseIgnore("Happy new year!","hApPy New Year!"));
     }
 
 }

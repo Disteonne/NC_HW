@@ -1,6 +1,6 @@
 package HW_ONE.secondHomeWork.chapter1;
 
-public class DegreeTwo {
+public class Ex2 {
 
     public int getDegree(int degree){
         //System.out.println(degree%360);
@@ -13,8 +13,8 @@ public class DegreeTwo {
     }
 
     public static void main(String[] args) {
-        DegreeTwo degreeTwo=new DegreeTwo();
-        degreeTwo.getDegree(-630);//-270
-        degreeTwo.getDegreeFloorMood(-630);//90
+        Ex2 ex2 =new Ex2();
+        ex2.getDegree(-630);//-270
+        ex2.getDegreeFloorMood(-630);//90
     }
 }

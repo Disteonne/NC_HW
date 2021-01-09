@@ -1,7 +1,7 @@
 package HW_ONE.secondHomeWork.chapter1;
 
 // НЕ ЗАВЕРШИЛА!!!!!
-public class TwoIntegersBetweenSeven {
+public class Ex7 {
 
     private Integer int1=453;
     private Integer int2=2147483646;
@@ -25,7 +25,7 @@ public class TwoIntegersBetweenSeven {
     }
 
     public static void main(String[] args) {
-        TwoIntegersBetweenSeven integersBetweenSeven=new TwoIntegersBetweenSeven();
+        Ex7 integersBetweenSeven=new Ex7();
         //integersBetweenSeven.compare();
         Integer int1=124753;
         Integer int2=-343532;

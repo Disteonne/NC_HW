@@ -2,7 +2,7 @@ package HW_ONE.secondHomeWork.chapter1;
 
 import java.math.BigInteger;
 
-public class FactorialSix {
+public class Ex6 {
     private static BigInteger factorialResult;
 
     public static BigInteger factorial(int value) throws Exception {

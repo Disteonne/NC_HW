@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class LotteryThirteen {
+public class Ex13 {
 
     public void resultLottery(){
         ArrayList<Integer> numberList=new ArrayList<>();
@@ -25,7 +25,7 @@ public class LotteryThirteen {
     }
 
     public static void main(String[] args) {
-        LotteryThirteen lotteryThirteen=new LotteryThirteen();
-        lotteryThirteen.resultLottery();
+        Ex13 ex13 =new Ex13();
+        ex13.resultLottery();
     }
 }

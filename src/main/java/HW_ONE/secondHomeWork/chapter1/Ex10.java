@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 
-public class RandomStringTen {
+public class Ex10 {
 
     public String getRandomString(int length){
         int count=0;
@@ -24,7 +24,7 @@ public class RandomStringTen {
             chars[i]=(char) (48+count);
             count++;
         }
-        //62 s
+        //62 symbols 
         Random randomIndex=new Random();
         StringBuilder randomString=new StringBuilder("");
         for (int i = 0; i < length; i++) {
@@ -33,13 +33,13 @@ public class RandomStringTen {
         return getRandomStringBase(randomString.toString());
     }
 
-    public String getRandomStringBase(String input){
+    private String getRandomStringBase(String input){
         byte[] bytes=input.getBytes(StandardCharsets.UTF_8);
         return new BigInteger(1,bytes).toString(36);
     }
 
     public static void main(String[] args) {
-        RandomStringTen randomString=new RandomStringTen();
+        Ex10 randomString=new Ex10();
         System.out.println(randomString.getRandomString(5));
     }
 }

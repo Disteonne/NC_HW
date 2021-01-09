@@ -1,6 +1,6 @@
 package HW_ONE.secondHomeWork.chapter1;
 
-public class StringNine {
+public class Ex9 {
 
     public static boolean equalsString(String stringFirst,String stringSecond){
         if(getCount(stringFirst,stringSecond)==Math.max(stringFirst.length(),stringSecond.length()))
