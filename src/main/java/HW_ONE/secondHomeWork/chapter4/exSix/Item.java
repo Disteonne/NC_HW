@@ -20,4 +20,11 @@ public class Item {
                     && price == other.price;
         }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

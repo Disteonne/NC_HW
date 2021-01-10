@@ -17,10 +17,15 @@ public class DiscountedItem extends Item{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof DiscountedItem)) return false;
-        if (!super.equals(o)) return false;
-        DiscountedItem that = (DiscountedItem) o;
-        return Double.compare(that.discount, discount) == 0;
+        if (o instanceof DiscountedItem){
+            DiscountedItem that = (DiscountedItem) o;
+            return Double.compare(that.discount, discount) == 0;
+        }
+        else if(!super.equals(o)) {
+            Item item=(Item) o;
+            return Double.compare(getPrice(),item.getPrice())==0 && getDescription().equals(item.getDescription());
+        }
+        return false;
     }
 
     @Override
