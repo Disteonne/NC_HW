@@ -5,9 +5,16 @@ import java.util.Collections;
 
 public class Employee implements Measurable {
     private double salary;
+    private String name;
 
-    public Employee(double salary) {
+    public Employee(double salary,String name) {
         this.salary = salary;
+        this.name=name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -23,7 +30,7 @@ public class Employee implements Measurable {
         return objects.length==0 ? 0.0:sum/objects.length;
     }
 
-    Measurable largest(Measurable[] objects){
+    String largest(Measurable[] objects){
         ArrayList<Double> array =new ArrayList<>();
         for (int i = 0; i < objects.length; i++) {
             if( objects[i] instanceof Employee){
@@ -31,7 +38,7 @@ public class Employee implements Measurable {
                 array.add(employee.getMeasure());
             }
         }
-        return objects[Collections.binarySearch(array,Collections.max(array))];
+        return objects[Collections.binarySearch(array,Collections.max(array))].getName();
     }
 
 }

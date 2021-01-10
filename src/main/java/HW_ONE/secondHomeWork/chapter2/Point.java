@@ -1,6 +1,6 @@
 package HW_ONE.secondHomeWork.chapter2;
 
-public class Point {
+public final class Point {
     private double x;
     private double y;
 

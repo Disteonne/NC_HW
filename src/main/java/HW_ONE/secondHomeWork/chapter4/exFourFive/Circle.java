@@ -5,17 +5,17 @@ import HW_ONE.secondHomeWork.chapter4.exOneTwoThree.Point;
 public class Circle extends Shape{
 
     private double radius;
-    private Point input;
+    private Point center;
 
-    public Circle(Point point, double radius) {
-        super(point);
+    public Circle(Point center, double radius) {
+        super(center);
         this.radius = radius;
-        this.input=point;
+        this.center=center;
     }
 
     @Override
     public Point getCenter() {
-        return null;
+        return center;
     }
 
     public double getRadius() {

@@ -18,8 +18,7 @@ public class LabeledPoint extends Point {
     @Override
     public String toString() {
         return "LabeledPoint{" +
-                "label='" + label + '\'' +
-                '}';
+                "label='" + label + "'" + ", x = "+super.x+", y = "+super.y+"}";
     }
 
     @Override

@@ -6,16 +6,22 @@ public class Rectangle extends Shape {
 
     private Point input;
     private double width;
+    private double height;
 
-    public Rectangle(Point point, double width) {
+    public Rectangle(Point point, double width ,double height) throws Exception {
         super(point);
+        if(width<=0 | height<=0){
+            throw new Exception("width/height must be >0");
+        }
         this.width = width;
+        this.height=height;
         this.input=point;
     }
 
+
     @Override
     public Point getCenter() {
-        return null;
+        return new Point(width/2,height/2);
     }
 
     public double getWidth() {
